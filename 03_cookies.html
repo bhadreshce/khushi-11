@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>hello</h1>
+    <button onclick="getName()">Get Name</button>
+    <script>
+      // cookies - use for store data in browser
+      document.cookie = 'myCookie=myValue'
+      document.cookie = 'myOtherCookie=myOtherValue'
+
+      function getName() {
+        console.log(document.cookie)
+        let data = document.cookie.split('=')
+        console.log(data[1])
+      }
+    </script>
+  </body>
+</html>

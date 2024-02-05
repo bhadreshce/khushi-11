@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <input type="text" id="add" />
+      <button onclick="AddData()">Add</button>
+
+      <div id="box"></div>
+    </center>
+    <script>
+      let todo = []
+      const AddData = () => {
+        let add = document.getElementById('add').value
+        todo.push(add)
+        document.getElementById('add').value = ''
+        // console.log(todo)
+        displayData(todo)
+      }
+
+      const displayData = (todo) => {
+        document.getElementById('box').innerHTML = ''
+        todo.forEach((value, index) => {
+          let head = document.createElement('h1')
+          let btn = document.createElement('button')
+          //   console.log(value, index)
+
+          btn.innerText = 'Delete'
+          btn.addEventListener('click', () => {
+            removeData(index)
+          })
+          head.innerText = value
+          document.getElementById('box').appendChild(head)
+          document.getElementById('box').appendChild(btn)
+        })
+      }
+
+      function removeData(i) {
+        todo.splice(i, 1)
+        console.log(todo)
+        displayData(todo)
+      }
+    </script>
+  </body>
+</html>

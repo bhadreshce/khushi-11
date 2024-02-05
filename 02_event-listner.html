@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">Click me</button>
+    <button id="remove" onclick="removeevent()">Remove Event</button>
+
+    <script>
+      let btn = document.getElementById('btn')
+      btn.addEventListener('click', alertFun)
+      function removeevent() {
+        btn.removeEventListener('click', alertFun)
+      }
+
+      function alertFun() {
+        alert('hii')
+      }
+    </script>
+  </body>
+</html>

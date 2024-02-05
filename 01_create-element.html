@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="createAdd()">Add</button>
+    <div id="box"></div>
+    <script>
+      let i = 0
+      function createAdd() {
+        let head = document.createElement('button')
+        head.addEventListener('click', alerdata)
+        head.innerText = i
+        document.getElementById('box').appendChild(head)
+        i++
+      }
+
+      function alerdata() {
+        alert('hii')
+      }
+    </script>
+  </body>
+</html>
