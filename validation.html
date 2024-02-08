@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .form {
+        height: 200px;
+        width: 200px;
+        margin: auto;
+        padding: 50px;
+        background-color: bisque;
+      }
+
+      #nameError {
+        color: red;
+        display: none;
+      }
+      #emailError {
+        color: red;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form">
+      <form action="" onsubmit="validate(event)">
+        <input type="text" id="name" placeholder="User Name" />
+        <br />
+        <span id="nameError">Please enter valide user name</span>
+        <br />
+        <input type="text" id="email" placeholder="Email" />
+        <br />
+        <span id="emailError">Please enter valide email name</span>
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <script>
+      var Emailpattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
+
+      //   var name = 'bhadreshgmailcom'
+      //   console.log(Emailpattern.test(name))
+
+      const validate = (e) => {
+        e.preventDefault()
+        var name = document.getElementById('name').value
+        var email = document.getElementById('email').value
+
+        var submitName = true
+        if (name == '') {
+          submitName = false
+          document.getElementById('nameError').style.display = 'block'
+        } else {
+          submitName = true
+          document.getElementById('nameError').style.display = 'none'
+        }
+
+        var submitEmail = true
+        if (email == '' || !Emailpattern.test(email)) {
+          submitEmail = false
+          document.getElementById('emailError').style.display = 'block'
+        } else {
+          submitEmail = true
+          document.getElementById('emailError').style.display = 'none'
+        }
+
+        if (submitEmail && submitName) {
+          e.currentTarget.submit()
+        }
+      }
+    </script>
+  </body>
+</html>
