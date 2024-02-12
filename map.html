@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var std = [
+        { name: 'bhavesh', age: 22, marks: 60 },
+        { name: 'jignesh', age: 23, marks: 60 },
+        { name: 'ramesh', age: 20, marks: 60 },
+      ]
+
+      var newStd = std.map((result) => {
+        if (result.name == 'bhavesh') {
+          return {
+            name: result.name + ' vala',
+            age: result.age,
+            marks: result.marks + 10,
+          }
+        } else {
+          return result
+        }
+      })
+
+      console.log(newStd)
+    </script>
+  </body>
+</html>
