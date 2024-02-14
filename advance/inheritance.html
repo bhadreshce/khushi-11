@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // single inheritance
+      class Sum {
+        constructor(a, b) {
+          this.num1 = a
+          this.num2 = b
+        }
+
+        add() {
+          console.log(this.num1 + this.num2)
+        }
+      }
+
+      class Multi extends Sum {
+        constructor(a, b) {
+          super(a, b)
+          this.n1 = a
+          this.n2 = b
+        }
+
+        into() {
+          console.log(this.n1 * this.n2)
+        }
+      }
+
+      let m = new Multi(2, 3)
+      m.into()
+      m.add()
+    </script>
+  </body>
+</html>

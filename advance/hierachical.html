@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class A {
+        constructor() {}
+        a() {
+          console.log('first')
+        }
+      }
+
+      class B extends A {
+        constructor() {
+          super()
+        }
+        b() {
+          console.log('second sub')
+        }
+      }
+
+      class C extends A {
+        constructor() {
+          super()
+        }
+        c() {
+          console.log('third sub')
+        }
+      }
+
+      let obj1 = new B()
+      let obj2 = new C()
+
+      obj1.a()
+      obj2.a()
+    </script>
+  </body>
+</html>

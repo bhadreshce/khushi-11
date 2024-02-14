@@ -1,0 +1,29 @@
+<!-- oops : object oriented programming system -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  class, object , method ,constructor, inheritance , polimrphism , interface ,abstraction
+      // class is a blueprint of object
+      class Sum {
+        constructor(a, b) {
+          this.num1 = a
+          this.num2 = b
+        }
+
+        add() {
+          console.log(this.num1 + this.num2)
+        }
+      }
+      let sum1 = new Sum(2, 3)
+      let sum2 = new Sum(5, 7)
+      sum1.add()
+      sum2.add()
+    </script>
+  </body>
+</html>
