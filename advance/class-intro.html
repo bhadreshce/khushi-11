@@ -1,4 +1,3 @@
-<!-- oops : object oriented programming system -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,10 +7,9 @@
   </head>
   <body>
     <script>
-      //  class, object , method ,constructor, inheritance , polimrphism , interface ,abstraction
-      // class is a blueprint of object
+      // class - class is a blueprint of object
+      // object -set of real world entitiy
 
-      // constructor : for define initial value in class
       class Sum {
         constructor(a, b) {
           this.num1 = a
@@ -22,10 +20,9 @@
           console.log(this.num1 + this.num2)
         }
       }
-      let sum1 = new Sum(2, 3)
-      let sum2 = new Sum(5, 7)
-      sum1.add()
-      sum2.add()
+
+      let obj = new Sum(2, 3)
+      obj.add()
     </script>
   </body>
 </html>

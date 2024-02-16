@@ -7,6 +7,8 @@
   </head>
   <body>
     <script>
+      // functions with the same name and different operations.
+
       class A {
         constructor() {}
         a() {
@@ -19,26 +21,14 @@
           super()
         }
 
-        b() {
+        a() {
+          super.a()
           console.log('this is b')
         }
       }
 
-      class C extends A {
-        constructor() {
-          super()
-        }
-
-        c() {
-          console.log('this is c')
-        }
-      }
-
-      let obj1 = new B()
-      let obj2 = new C()
-
-      obj1.a()
-      obj2.a()
+      let obj = new B()
+      obj.a()
     </script>
   </body>
 </html>
