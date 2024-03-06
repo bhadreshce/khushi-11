@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		 .paragraph{
+		 	background-color: red;
+		 }
+
+		 .p{
+		 	background-color: green;
+
+		 }
+	</style>
+</head>
+<body>
+<p class="paragraph" id="para">hii this is paragraph</p>
+<p class="p" id="para2">hii this is paragraph</p>
+
+<button onclick="addClass()">Add</button>
+<script type="text/javascript">
+	let list = document.getElementById("para").classList
+ 	let list2 = document.getElementById("para2").classList
+
+ function addClass(){
+ 	list.toggle('paragraph')
+ 	list2.toggle('p')
+ }
+</script>
+</body>
+</html>

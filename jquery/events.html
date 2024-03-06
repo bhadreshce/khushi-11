@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button>Click me</button> -->
+    <!-- <input type="text" id="inpt"> -->
+    <form action="" >
+        <input type="text">
+        <input type="submit" value="Submit">
+    </form>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(()=>{
+   //click
+    //  $('button').click(()=>{
+    //     console.log('hii i am printed');
+    //  })
+    //dbclick
+    // $('button').dblclick(()=>{
+    //      console.log('i am clicked two times');
+    // })
+    // mouseenter
+    // $('button').mouseenter(()=>{
+    //     console.log('mouse enter');
+    // })
+    //mousedown
+    // $('button').mousedown(()=>{
+    //     console.log('mouse down');
+    // })
+    //mouseleave
+    // $('button').mouseleave(()=>{
+    //     console.log('mouse leave now');
+    // })
+  // mouseup
+
+//   $("button").mouseup(()=>{
+//     console.log('mouse up now');
+//   })
+
+//hover
+// $('button').hover(()=>{
+//     console.log('mouse hover work');
+// })
+// focus
+// $('#inpt').focus(function(){
+//   $(this).css("background-color", "#cccccc");
+// })
+//blur 
+
+// $('#inpt').blur(function(){
+//   $(this).css("background-color", "red");
+// })
+
+// $('button').on('click',function(){
+//      $(this).css("background-color", "red");
+// })
+
+// $('button').on({
+//     mouseenter:function(){
+//         console.log('mouse inter');
+//     },
+//       mousedown:function(){
+//         console.log('mouse down');
+//     },
+//     mouseleave:function(){
+//         console.log('mouse leave now');
+//     } 
+// })
+
+//keydown
+// $('#inpt').keydown(function(){
+//     console.log($(this).val());
+// })
+
+// keypress
+
+// $('#inpt').keypress(function(){
+//     console.log($(this).val());
+// })
+
+//keyup
+// $('#inpt').keyup(function(){
+//     console.log($(this).val());
+// })
+
+   //change 
+//    $('#inpt').change(function(){
+//     console.log($(this).val());
+// }) 
+
+//submit
+
+$('form').submit(function(e){
+        e.preventDefault();
+    console.log('form submited success');
+})
+
+})
+</script> 
+</body>
+</html>
