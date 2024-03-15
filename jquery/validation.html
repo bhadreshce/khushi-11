@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         form{
+            padding: 20px;
+             height: 200px;
+             width: 200px;
+             margin: auto;
+             background-color: rgb(113, 101, 101);
+         }
+    </style>
+</head>
+<body>
+      
+
+    <form action="" id="form">
+         <label for="">Name</label>
+         <input type="text" id="name" name="name">
+         <br>
+         <label for="">Email</label>
+         <input type="email" name="email">
+         <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js" integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+//         required — a field should be filled obligatory (true or false);
+// maxlength — maximum number of characters (a number);
+// minlength — minimum number of characters (a number);
+// email — verifying of the email address correctness (true or false);
+// url — verifying of the url address correctness (true or false);
+// remote — specifying a file for checking the field (for example: check.php);
+// date — verifying of the date correctness (true or false);
+// dateISO — verifying of the ISO date correctness (true or false);
+// number — the number verifying (true or false);
+// digits — only numbers (true or false);
+// creditcard — a credit card number correctness (true or false);
+// equalTo — equal to something (for example, to another field equalTo:»#pswd»);
+// accept — verifying of correct extension (accept: «xls|csv»);
+// rangelength — range of character lengths, minimum and maximum (rangelength: [2, 6]);
+// range — a number should be within the range from to (range: [13, 23]);
+// max — maximum number (22);
+// min — minimum number (11).
+       $(document).ready(()=>{
+            $('#form').validate({
+             
+                rules:{
+                    name:{
+                        required: true 
+                    },
+                    email:{
+                        required:true, 
+                        email:true
+                    }
+                },
+
+                messages:{
+                     name:{
+                        required: '<span style="color:red">name is required</span>' 
+                    },
+                    email:{
+                           required: '<span style="color:red">email is required<span>',
+                            email:'<span style="color:red">Please add valid email</span>' 
+                    }
+                },
+
+                 submitHandler: function (form) {
+                    // form.submit()
+                 }
+                
+
+            })
+       })
+    </script>
+</body>
+</html>
