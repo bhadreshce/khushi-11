@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <style>
+        .bx {
+            margin: 0 auto;
+            max-width: 240px;
+        }
+
+
+        .bx {
+            padding-left: 20px;
+            width: inherit !important
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bx">
+        <div class="bxslider">
+
+            <div><img height="200px" width="100%" src="banner1.webp" alt=""></div>
+            <div><img height="200px" width="100%" src="banner2.webp" alt=""></div>
+            <div><img height="200px" width="100%" src="banner3.jpg" alt=""></div>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(() => {
+            $('.bxslider').bxSlider({
+                slideWidth: 500,
+                pager: false,
+
+            })
+        })
+    </script>
+</body>
+
+</html>

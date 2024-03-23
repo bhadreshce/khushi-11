@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* HTML: <div class="loader"></div> */
+        .loader {
+            width: 60px;
+            aspect-ratio: 1;
+            color: #ffa516;
+            background:
+                linear-gradient(currentColor 0 0) 100% 0,
+                linear-gradient(currentColor 0 0) 0 100%;
+            background-size: 50.1% 50.1%;
+            background-repeat: no-repeat;
+            animation: l7-0 1s infinite steps(1);
+        }
+
+        .loader::before,
+        .loader::after {
+            content: "";
+            position: absolute;
+            inset: 0 50% 50% 0;
+            background: currentColor;
+            transform: scale(var(--s, 1)) perspective(150px) rotateY(0deg);
+            transform-origin: bottom right;
+            animation: l7-1 .5s infinite linear alternate;
+        }
+
+        .loader::after {
+            --s: -1, -1;
+        }
+
+        @keyframes l7-0 {
+            0% {
+                transform: scaleX(1) rotate(0deg)
+            }
+
+            50% {
+                transform: scaleX(-1) rotate(-90deg)
+            }
+        }
+
+        @keyframes l7-1 {
+            49.99% {
+                transform: scale(var(--s, 1)) perspective(150px) rotateX(-90deg);
+                filter: grayscale(0)
+            }
+
+            50% {
+                transform: scale(var(--s, 1)) perspective(150px) rotateX(-90deg);
+                filter: grayscale(0.8)
+            }
+
+            100% {
+                transform: scale(var(--s, 1)) perspective(150px) rotateX(-180deg);
+                filter: grayscale(0.8)
+            }
+        }
+
+        .main {
+            display: none;
+        }
+
+        .load {
+            width: 100%;
+            height: 95vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="load">
+        <div class="loader"></div>
+    </div>
+
+    <div class="main">
+        <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, quasi eum eaque dolore voluptatum
+            temporibus repellat ea tempore explicabo quas, in provident ipsum ut quis debitis rerum ratione iure quod?
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta beatae reprehenderit necessitatibus nemo, iste
+            deleniti earum aut perferendis est adipisci tempore fugit, ad, a repellendus id ipsum qui nam voluptatibus!
+            Fugit ullam provident rerum nisi molestiae odit recusandae? Esse blanditiis aliquam iste reprehenderit
+            veritatis itaque rerum atque ea reiciendis, quo vero consequatur perspiciatis illum obcaecati vel? Esse
+            alias quasi vitae placeat deleniti soluta voluptate totam labore ratione. Nemo vero veritatis accusantium
+            deleniti atque dicta impedit eveniet pariatur porro. Exercitationem vero ut vitae architecto, non laborum
+            quibusdam distinctio repudiandae quaerat quisquam neque, temporibus necessitatibus labore nesciunt tenetur,
+            voluptates nihil alias ullam consectetur? Aperiam, atque officia nobis veniam voluptatum distinctio quos
+            facilis voluptatem, maxime reiciendis debitis inventore similique ipsam dicta fugit dolor voluptatibus
+            corporis dolorem provident. Et commodi veritatis ipsa error mollitia praesentium inventore nulla laudantium
+            in aliquam, fuga blanditiis incidunt, nisi minima fugiat voluptate unde. Libero modi qui placeat
+            voluptatibus soluta dignissimos quod, perspiciatis dolorem vel esse tenetur eligendi magni expedita adipisci
+            aliquam impedit! Sed quae exercitationem placeat sequi porro officiis, beatae maiores consequatur enim quod
+            in omnis accusantium amet veniam, rem ducimus illum! Ea, laudantium reiciendis eaque pariatur consequuntur,
+            reprehenderit quas provident non ex commodi neque aspernatur quae illo ipsum expedita vel perferendis
+            quaerat sapiente enim. Consequuntur, labore harum! Quia repudiandae, magni animi perferendis molestias
+            ratione ab, incidunt culpa nobis repellendus alias pariatur recusandae nam dicta perspiciatis, quisquam ea
+            velit quas sequi? Harum quia eius non qui error dicta aliquam hic quam consectetur doloribus esse
+            voluptatibus molestias, vel ex vitae! Labore at odio, quibusdam rerum possimus ratione fugiat blanditiis in
+            ipsum nam cum deleniti doloribus neque harum soluta dolorum assumenda atque nemo praesentium! Rerum, sint
+            quaerat incidunt ipsam dolorum reiciendis perferendis, distinctio tenetur provident cumque delectus dicta
+            quam error, temporibus porro laudantium impedit. Magnam, voluptate vitae. Deserunt natus ducimus quaerat
+            repellat expedita quo iste non facere asperiores qui nostrum, eligendi recusandae consequuntur iusto, ipsam
+            necessitatibus? Ipsum magni quasi repellat vero minus consectetur nobis, recusandae aliquid praesentium
+            quaerat, reiciendis ullam harum officiis vitae ut ea expedita voluptatum ad laudantium tenetur dolorum totam
+            ex. Aliquam sequi pariatur dignissimos? Inventore impedit doloremque, neque illum hic placeat. Quisquam quae
+            optio possimus, expedita, quos dolor rem vel eum molestiae repudiandae praesentium. Aspernatur eius adipisci
+            id quisquam, quo eveniet commodi iusto. Blanditiis nihil cumque consequatur nostrum quo deserunt, voluptatum
+            dolorem rem mollitia minima qui voluptas iusto tempore maiores, dolores aspernatur commodi fuga inventore
+            consequuntur velit voluptatibus!</p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        setTimeout(() => {
+            var main = document.getElementsByClassName('main')
+            main[0].style.display = 'block'
+            var load = document.getElementsByClassName('load')
+            load[0].style.display = 'none'
+        }, 5000);
+    </script>
+</body>
+
+</html>
