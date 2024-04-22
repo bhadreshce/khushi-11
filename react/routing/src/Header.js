@@ -11,13 +11,18 @@ const Header = () => {
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+        {/* <li class="nav-item">
           <Link to={'/'} class="nav-link active" aria-current="page">Home</Link>
         </li>
         <li class="nav-item">
           <Link to={'/contact'} class="nav-link" >Contact</Link>
-        </li>
-     
+        </li> */}
+     <li class="nav-item">
+          <Link to={'/category/mens'} class="nav-link" aria-current="page">Mens</Link>
+     </li>
+    <li class="nav-item">
+          <Link to={'/category/womens'} class="nav-link" aria-current="page">Womens</Link>
+    </li>
     
       </ul>
       <form class="d-flex" role="search">
