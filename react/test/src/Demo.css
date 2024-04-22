@@ -1,0 +1,15 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.demo {
+
+    text-align: center;
+}
+
+.box {
+    height: 200px;
+    width: 100%;
+    /* border: 2px solid black; */
+}

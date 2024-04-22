@@ -1,0 +1,10 @@
+react js - react js is use for create single page web apllications (SPA)
+
+chrome - install node js
+npm i -g create-react-app 
+create-react-app <app-name>
+
+
+node -v 
+npm -v 
+npm (node packege manager)
