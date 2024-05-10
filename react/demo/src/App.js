@@ -1,12 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-import Head from './Head';
+import Demo from './Demo';
+import Ref from './Ref';
+import Child from './forword/Child';
+import Inpt from './count/Inpt';
 
 function App() {
   return (
-    <div>
-      <Head />
-      <h1>hii this is my first app</h1>
+    <div className='App'>
+      <Inpt/>
+      {/* <Child /> */}
+      {/* <Demo /> */}
     </div>
   );
 }

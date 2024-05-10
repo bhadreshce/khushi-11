@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const Header = () => {
   return (
       <>
-      <nav class="navbar navbar-expand-lg bg-dark">
+      <nav class="navbar navbar-expand-lg bg-warning">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,7 +18,7 @@ const Header = () => {
           <Link to={'/contact'} class="nav-link" >Contact</Link>
         </li> */}
      <li class="nav-item">
-          <Link to={'/category/mens'} class="nav-link" aria-current="page">Mens</Link>
+          <Link to={'/category/mens'} class="nav-link " aria-current="page">Mens</Link>
      </li>
     <li class="nav-item">
           <Link to={'/category/womens'} class="nav-link" aria-current="page">Womens</Link>
