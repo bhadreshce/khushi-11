@@ -4,6 +4,7 @@ import List from './List';
 import Product from './Product';
 import Axios from './Axios';
 import Crud from './Crud';
+import Fetch from './Fetch';
 
 function App() {
 
@@ -12,7 +13,8 @@ function App() {
       {/* <List/> */}
       {/* <Product/> */}
       {/* <Axios/> */}
-      <Crud/>
+      {/* <Crud/> */}
+      <Fetch/>
     </div>
   );
 }
