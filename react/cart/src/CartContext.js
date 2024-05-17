@@ -9,7 +9,7 @@ const CartContext = ({ children }) => {
       <>
           <Addcart.Provider value={{ cart , setCart}}>
               { children }
-      </Addcart.Provider>
+          </Addcart.Provider>
       </>
   )
 }
