@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Demo from './Demo';
+import Todo from './Todo';
 import { useEffect, useState } from 'react';
 function App() {
   // useEffect(() => { 
@@ -11,10 +12,11 @@ function App() {
   const [count, setCount] = useState(3)
   return (
     <div className="App">
-      <button onClick={() => {
+      {/* <button onClick={() => {
         setCount(count + 3)
       }}>Props Chnge</button>
-      <Demo value={count} />
+      <Demo value={count} /> */}
+      <Todo />
     </div>
   );
 }
