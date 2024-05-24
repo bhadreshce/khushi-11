@@ -3,13 +3,15 @@ import './App.css';
 import ThemeContext from './ThemeContext';
 import Header from './Header';
 import Home from './Home';
+import Memo from './Memo';
 function App() {
   return (
     <div className="App">
-      <ThemeContext>
+      {/* <ThemeContext>
         <Header />
         <Home />
-      </ThemeContext>
+      </ThemeContext> */}
+      <Memo/>
     </div>
   );
 }
