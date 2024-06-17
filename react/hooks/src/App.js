@@ -9,6 +9,10 @@ import Form from './Form';
 import Memo from './usememo/Memo';
 import A from './props/A';
 import Parent from './callback/Parent';
+import Local from './Local/Local';
+import Reducer from './Local/Reducer';
+import Dog from './Local/Dog';
+import Layout from './Local/Layout';
 function App() {
   return (
     <div className="App">
@@ -21,7 +25,11 @@ function App() {
       {/* <Form /> */}
       {/* <Memo /> */}
       {/* <A /> */}
-      <Parent />
+      {/* <Parent /> */}
+      {/* <Local /> */}
+      {/* <Reducer /> */}
+      {/* <Dog /> */}
+      <Layout />
     </div>
   );
 }
