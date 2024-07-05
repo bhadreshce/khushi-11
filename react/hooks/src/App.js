@@ -13,9 +13,21 @@ import Local from './Local/Local';
 import Reducer from './Local/Reducer';
 import Dog from './Local/Dog';
 import Layout from './Local/Layout';
+import Head from './custom-hook/Head';
+import { Routes, Route } from 'react-router-dom';
+import Main from './custom-hook/Main';
+import Contact from './custom-hook/Contact';
+import About from './custom-hook/About';
 function App() {
   return (
-    <div className="App">
+    <>
+
+      <Head />
+      <Routes>
+        <Route path='/' element={<Main />}></Route>
+        <Route path='/contact' element={<Contact />}></Route>
+        <Route path='/about' element={<About />}></Route>
+      </Routes>
       {/* <ThemeContext>
         <Header />
         <Home />
@@ -29,8 +41,8 @@ function App() {
       {/* <Local /> */}
       {/* <Reducer /> */}
       {/* <Dog /> */}
-      <Layout />
-    </div>
+      {/* <Layout /> */}
+    </>
   );
 }
 
