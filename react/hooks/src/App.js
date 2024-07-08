@@ -18,11 +18,13 @@ import { Routes, Route } from 'react-router-dom';
 import Main from './custom-hook/Main';
 import Contact from './custom-hook/Contact';
 import About from './custom-hook/About';
+import Pattern from './custom-hook/Try';
 function App() {
   return (
     <>
 
       <Head />
+      <Pattern rows={5} />
       <Routes>
         <Route path='/' element={<Main />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
