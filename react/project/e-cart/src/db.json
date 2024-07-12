@@ -1,7 +1,137 @@
 {
-  
-"user":[
-    
-]
-
+  "user": [
+    {
+      "id": "4fb0",
+      "registerUsername": "bhadresh",
+      "registerEmail": "bhadreshce17@gmail.com",
+      "isamin": "",
+      "registerPassword": "12121"
+    },
+    {
+      "id": "a2ff",
+      "registerUsername": "bhadresh",
+      "registerEmail": "bhadreshcedd17@gmail.com",
+      "isamin": "",
+      "registerPassword": "12121"
+    },
+    {
+      "id": "e0fa",
+      "registerUsername": "bhadresh",
+      "registerEmail": "bhadres11h@exelanceit.in",
+      "isamin": "",
+      "registerPassword": "11111",
+      "isadmin": true
+    },
+    {
+      "id": "7a4c",
+      "registerUsername": "bhadresh",
+      "registerEmail": "bhadres11h@exelanceit.in",
+      "isamin": "",
+      "registerPassword": "11111",
+      "isadmin": true
+    },
+    {
+      "id": "0b01",
+      "registerUsername": "bhadresh",
+      "registerEmail": "bhadres11h@exelanceit.in",
+      "isamin": "",
+      "registerPassword": "11111",
+      "isadmin": true
+    },
+    {
+      "id": "c211",
+      "registerUsername": "bhadresh",
+      "registerEmail": "e2e2@efef.6yy6",
+      "isamin": "",
+      "registerPassword": "56565"
+    },
+    {
+      "id": "a2a6",
+      "registerUsername": "bhadresh",
+      "registerEmail": "bbbb@gmail.com",
+      "isamin": "",
+      "registerPassword": "1111",
+      "isadmin": true
+    },
+    {
+      "id": "6a79",
+      "registerUsername": "bhadresh",
+      "registerEmail": "bhadreshdddce17@gmail.com",
+      "isamin": "",
+      "registerPassword": "ddddd",
+      "isadmin": true
+    },
+    {
+      "id": "6eb3",
+      "registerUsername": "bhadresh",
+      "registerEmail": "bhadresh@gg.gmail",
+      "isamin": "",
+      "registerPassword": "ddddd",
+      "isadmin": true
+    },
+    {
+      "id": "e4c7",
+      "registerUsername": "bhadresh",
+      "registerEmail": "bhadreshdddddddd@gg.gmail",
+      "isamin": "",
+      "registerPassword": "ddddd",
+      "isadmin": true
+    },
+    {
+      "id": "9a09",
+      "registerUsername": "bhadresh",
+      "registerEmail": "bhadreshsssssdddddddd@gg.gmail",
+      "isamin": "",
+      "registerPassword": "ddddd",
+      "isadmin": true
+    },
+    {
+      "id": "b46b",
+      "registerUsername": "bhadresh",
+      "registerEmail": "cdcd@gmail.com",
+      "isamin": "",
+      "registerPassword": "1234",
+      "isadmin": true
+    },
+    {
+      "id": "2ecf",
+      "registerUsername": "bhadresh",
+      "registerEmail": "rerr@gmail.com",
+      "isamin": "",
+      "registerPassword": "1234",
+      "isadmin": true
+    },
+    {
+      "id": "1457",
+      "registerUsername": "bhadresh",
+      "registerEmail": "bhadreshsss@exelanceit.in",
+      "isamin": "",
+      "registerPassword": "2121212",
+      "isadmin": true
+    },
+    {
+      "id": "d714",
+      "registerUsername": "bhadresh",
+      "registerEmail": "bhadreshce22117@gmail.com",
+      "isamin": "",
+      "registerPassword": "12121",
+      "isadmin": true
+    },
+    {
+      "id": "6d58",
+      "registerUsername": "bhadresh",
+      "registerEmail": "bhadresh@esssxelanceit.in",
+      "isamin": "",
+      "registerPassword": "1212121",
+      "isadmin": true
+    },
+    {
+      "id": "856b",
+      "registerUsername": "bhadresh",
+      "registerEmail": "bhadresh@exelaqqnceit.in",
+      "isamin": "",
+      "registerPassword": "qqqqq",
+      "isadmin": true
+    }
+  ]
 }
