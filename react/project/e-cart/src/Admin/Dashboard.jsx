@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react'
+import { NavLink, Outlet, useNavigate, useLocation } from 'react-router-dom'
 import './Dashboard.css'
 const Dashboard = () => {
 
+    const navigate = useNavigate()
     useEffect(() => {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
@@ -15,60 +17,34 @@ const Dashboard = () => {
 
         };
     }, [])
+
+    const logoutButton = () => {
+        navigate('/login')
+        localStorage.clear()
+    }
     return (
         <>
             <div class="wrapper">
                 <div class="sidebar my-sidebar">
                     <div class="header my-heade">Admin Dashboard</div>
                     <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Dashboard</a>
+                        <li class="nav-item nav-link" >
+                            <NavLink to={'/dashboard/category'} class="nav-link" >Category</NavLink>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Users</a>
+                        <li class="nav-item nav-link" >
+                            <NavLink class="nav-item" to={'/dashboard/product'}>Product</NavLink>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Settings</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Reports</a>
-                        </li>
+
                     </ul>
                 </div>
                 <div class="content">
                     <div class="header">
-                        <button class="btn logout-btn">Logout</button>
+                        <button class="btn logout-btn" onClick={() => {
+                            logoutButton()
+                        }}>Logout</button>
                     </div>
                     <div class="container mt-4">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card mb-4">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card mb-4">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card mb-4">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <Outlet />
 
                     </div>
                 </div>

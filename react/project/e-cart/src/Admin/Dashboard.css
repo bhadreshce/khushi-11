@@ -47,6 +47,23 @@ body, html {
       color: white;
     }
 
-    .active{
+    .highlight{
          background-color:  #dc3562;
     }
+
+    .nav-link a{
+      display: block;
+      padding: 10px;
+      text-decoration: none !important;
+      color:white !important;
+      font-weight: bold;
+    }
+      .nav-link .active{
+       background-color:red !important;
+       width: 100%;
+    }
+
+    
+li.nav-link{
+  padding: 0px !important;
+}

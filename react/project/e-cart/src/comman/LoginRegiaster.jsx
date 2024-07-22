@@ -87,7 +87,7 @@ const LoginRegiaster = () => {
 
       setLoginFormError(validateForm)
       if (Object.keys(validateForm).length == 0) {
-        localStorage.setItem("usename", loginCheck.data[0].username);
+        localStorage.setItem("username", loginCheck.data[0].registerUsername);
         localStorage.setItem("isadmin", loginCheck.data[0].isamin);
 
         if (loginCheck.data[0].isamin == true) {

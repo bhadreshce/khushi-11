@@ -133,5 +133,15 @@
       "registerPassword": "qqqqq",
       "isadmin": true
     }
+  ],
+  "category": [
+    {
+      "id": "568c",
+      "category": "Tshirts"
+    },
+    {
+      "id": "36b9",
+      "category": "Sarees"
+    }
   ]
 }
