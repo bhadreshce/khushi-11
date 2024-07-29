@@ -136,12 +136,16 @@
   ],
   "category": [
     {
-      "id": "568c",
+      "id": "fedc",
+      "category": "Sarees"
+    },
+    {
+      "id": "5dd2",
       "category": "Tshirts"
     },
     {
-      "id": "36b9",
-      "category": "Sarees"
+      "id": "552c",
+      "category": "Hanky"
     }
   ]
 }

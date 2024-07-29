@@ -42,7 +42,9 @@ const Category = () => {
                                     <td><button type="button" class="btn btn-danger" onClick={() => {
                                         deleteCat(result.id)
                                     }}>Delete</button>
-                                        <button type="button" class="btn btn-primary">Update</button>
+                                        <button type="button" class="btn btn-primary" onClick={() => {
+                                            navigate(`/dashboard/category/update/${result.id}`)
+                                        }}>Update</button>
 
                                     </td>
                                 </tr>

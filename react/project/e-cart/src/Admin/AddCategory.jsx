@@ -15,13 +15,17 @@ const AddCategory = () => {
         <>
             <h4>Add Category</h4>
             <form onSubmit={submitCat}>
-                <div class="form-group mb-2">
-                    <label for="formGroupExampleInput">Category</label>
-                    <input type="text" class="form-control" id="cat" placeholder="Example input" />
-                </div>
+                {newFunction()}
                 <input type="submit" class="btn btn-primary" />
             </form></>
     )
+
+    function newFunction() {
+        return <div class="form-group mb-2">
+            <label for="formGroupExampleInput">Category</label>
+            <input type="text" class="form-control" id="cat" placeholder="Example input" />
+        </div>
+    }
 }
 
 export default AddCategory
