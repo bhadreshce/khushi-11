@@ -142,10 +142,17 @@
     {
       "id": "5dd2",
       "category": "Tshirts"
-    },
+    }
+  ],
+  "product": [
     {
-      "id": "552c",
-      "category": "Hanky"
+      "id": "5fd5",
+      "ProductName": "Banarasi Saree111",
+      "ProductPrice": "12",
+      "ProductDecription": "this saree is designed by manish manohtra",
+      "ProductImage": "https://media.shopkund.com/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/c/acu7601-1-embroidered-lace-silk-green-saree-with-blouse-sr23275_1_.jpg",
+      "ProductQuntity": "21",
+      "ProductCategory": "Sarees"
     }
   ]
 }
