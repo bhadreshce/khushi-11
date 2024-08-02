@@ -51,7 +51,7 @@ const Product = () => {
                                         deleteProduct(result.id)
                                     }}>Delete</button>
                                         <button type="button" class="btn btn-primary" onClick={() => {
-                                            navigate(`/dashboard/category/update/${result.id}`)
+                                            navigate(`/dashboard/product/update/${result.id}`)
                                         }}>Update</button>
 
                                     </td>
@@ -61,7 +61,7 @@ const Product = () => {
                     })}
 
                     {product.length == 0 && <tr>
-                        <td colSpan={2} style={{ textAlign: "center" }}>No Data</td>
+                        <td colSpan={4} style={{ textAlign: "center" }}>No Data</td>
                     </tr>}
 
                 </tbody>

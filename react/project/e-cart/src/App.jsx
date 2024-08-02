@@ -15,6 +15,7 @@ import { PrivateRouter } from './Admin/PrivateRoutes'
 import AddCategory from './Admin/AddCategory'
 import UpdateCategory from './Admin/UpdateCategory'
 import AddProduct from './Admin/AddProduct'
+import UpdateProduct from './Admin/UpdateProduct'
 function App() {
 
 
@@ -37,6 +38,7 @@ function App() {
               <Route path='/dashboard/category/add' element={<AddCategory />}></Route>
               <Route path='/dashboard/product/add' element={<AddProduct />}></Route>
               <Route path='/dashboard/category/update/:id' element={<UpdateCategory />}></Route>
+              <Route path='/dashboard/product/update/:id' element={<UpdateProduct />}></Route>
             </Route>
           </Route>
           <Route path='/' element={<UserOutlet />}>
