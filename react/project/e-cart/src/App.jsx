@@ -16,6 +16,8 @@ import AddCategory from './Admin/AddCategory'
 import UpdateCategory from './Admin/UpdateCategory'
 import AddProduct from './Admin/AddProduct'
 import UpdateProduct from './Admin/UpdateProduct'
+import UserCategory from './user/UserCategory'
+import ProductDetails from './user/ProductDetails'
 function App() {
 
 
@@ -43,6 +45,8 @@ function App() {
           </Route>
           <Route path='/' element={<UserOutlet />}>
             <Route path='/' element={<Home />}></Route>
+            <Route path='/category/:id' element={<UserCategory />}></Route>
+            <Route path='/product/:id' element={<ProductDetails />}></Route>
             <Route path='/login' element={<LoginRegiaster />}></Route>
           </Route>
         </Routes>

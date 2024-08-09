@@ -132,6 +132,13 @@
       "isamin": "",
       "registerPassword": "qqqqq",
       "isadmin": true
+    },
+    {
+      "id": "3c55",
+      "registerUsername": "bbb",
+      "registerEmail": "bbb@gmail.com",
+      "isamin": "",
+      "registerPassword": "12121"
     }
   ],
   "category": [
@@ -153,6 +160,47 @@
       "ProductImage": "https://media.shopkund.com/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/c/acu7601-1-embroidered-lace-silk-green-saree-with-blouse-sr23275_1_.jpg",
       "ProductQuntity": "32",
       "ProductCategory": "Sarees"
+    },
+    {
+      "id": "fe09",
+      "ProductName": "Banarasi Saree",
+      "ProductPrice": "2000",
+      "ProductDecription": "this saree is designed by manish manohtra",
+      "ProductImage": "https://media.shopkund.com/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/c/acu7601-1-embroidered-lace-silk-green-saree-with-blouse-sr23275_1_.jpg",
+      "ProductQuntity": "32",
+      "ProductCategory": "Sarees"
+    },
+    {
+      "id": "8ca2",
+      "ProductName": "Banarasi Saree212",
+      "ProductPrice": "11111",
+      "ProductDecription": "this saree is designed by manish manohtra",
+      "ProductImage": "https://media.shopkund.com/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/c/acu7601-1-embroidered-lace-silk-green-saree-with-blouse-sr23275_1_.jpg",
+      "ProductQuntity": "32",
+      "ProductCategory": "Sarees"
+    },
+    {
+      "id": "761a",
+      "ProductName": "tshirt",
+      "ProductPrice": "2000",
+      "ProductDecription": "this saree is designed by manish manohtra",
+      "ProductImage": "https://fullyfilmy.in/cdn/shop/products/New-Mockups---no-hanger---TShirt-Yellow.jpg?v=1639657077",
+      "ProductQuntity": "32",
+      "ProductCategory": "Tshirts"
+    },
+    {
+      "id": "b051",
+      "ProductName": "My Saree",
+      "ProductPrice": "1500",
+      "ProductDecription": "this saree is designed by manish manohtra",
+      "ProductImage": "https://i.pinimg.com/736x/ea/8f/69/ea8f6929c7de032022ffca614177326a.jpg",
+      "ProductQuntity": "22",
+      "ProductCategory": "Sarees"
     }
-  ]
+  ],
+"cart":[{
+  "id":32,
+  "productid":"23",
+  "quntity":1
+}]
 }
