@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 const Header = () => {
     const navigate = useNavigate()
     const cart = useSelector((result) => {
-        console.log(result);
+        return result.cart.countCart
     })
     const [cat, setCat] = useState([])
     useEffect(() => {
@@ -559,7 +559,7 @@ const Header = () => {
                                     <use href="#icon_cart" />
                                 </svg>
                                 <span className="cart-amount d-block position-absolute js-cart-items-count">
-                                    3
+                                    {cart}
                                 </span>
                             </a>
                             <a className="header-tools__item" href="account_wishlist.html">

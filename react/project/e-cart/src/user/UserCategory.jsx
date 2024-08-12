@@ -21,8 +21,17 @@ const UserCategory = () => {
         setProducts(productList.data)
     }
 
-    const insertCart = () => {
+    const insertCart = async (prd) => {
         console.log('hi');
+        let cartItem = await axios.get(`http://localhost:8000/cart?productid=${prd.id}`)
+        console.log(cartItem);
+
+        if (cartItem.data.length == 0) {
+            await axios.post(`http://localhost:8000/cart`, { productid: prd.id, quantity: 1 })
+        } else {
+            let cartyData = cartItem.data[0]
+            await axios.patch(`http://localhost:8000/cart/${cartyData.id}`, { quantity: cartyData.quantity + 1 })
+        }
         dispatch(addToCart(1))
     }
     return (
@@ -288,7 +297,7 @@ const UserCategory = () => {
                                                     title="Add To Cart"
 
                                                     onClick={() => {
-                                                        insertCart()
+                                                        insertCart(result)
                                                     }}
                                                 >
                                                     Add To Cart

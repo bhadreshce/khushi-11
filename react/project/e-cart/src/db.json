@@ -198,9 +198,16 @@
       "ProductCategory": "Sarees"
     }
   ],
-"cart":[{
-  "id":32,
-  "productid":"23",
-  "quntity":1
-}]
+  "cart": [
+    {
+      "id": "8f5f",
+      "productid": "56fc",
+      "quantity": 10
+    },
+    {
+      "id": "a687",
+      "productid": "fe09",
+      "quantity": 1
+    }
+  ]
 }
