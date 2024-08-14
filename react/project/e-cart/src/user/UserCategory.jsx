@@ -3,7 +3,9 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { addToCart } from '../cart/cartSlice'
 import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 const UserCategory = () => {
+    const navigate = useNavigate()
     const dispatch = useDispatch()
     const [products, setProducts] = useState([])
     const [cat, setCat] = useState({})
@@ -22,17 +24,22 @@ const UserCategory = () => {
     }
 
     const insertCart = async (prd) => {
-        console.log('hi');
-        let cartItem = await axios.get(`http://localhost:8000/cart?productid=${prd.id}`)
-        console.log(cartItem);
 
-        if (cartItem.data.length == 0) {
-            await axios.post(`http://localhost:8000/cart`, { productid: prd.id, quantity: 1 })
+        if (localStorage.getItem('userid') == undefined) {
+            navigate('/login')
         } else {
-            let cartyData = cartItem.data[0]
-            await axios.patch(`http://localhost:8000/cart/${cartyData.id}`, { quantity: cartyData.quantity + 1 })
+            let cartItem = await axios.get(`http://localhost:8000/cart?productid=${prd.id}&userid=${localStorage.getItem('userid')}`)
+            console.log(cartItem);
+
+            if (cartItem.data.length == 0) {
+                await axios.post(`http://localhost:8000/cart`, { productid: prd.id, quantity: 1, userid: localStorage.getItem('userid') })
+            } else {
+                let cartyData = cartItem.data[0]
+                await axios.patch(`http://localhost:8000/cart/${cartyData.id}`, { quantity: cartyData.quantity + 1 })
+            }
+            dispatch(addToCart(1))
         }
-        dispatch(addToCart(1))
+
     }
     return (
         <>

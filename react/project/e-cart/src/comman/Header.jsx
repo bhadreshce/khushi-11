@@ -9,11 +9,25 @@ const Header = () => {
         return result.cart.countCart
     })
     const [cat, setCat] = useState([])
+    const [cartItem, setcartItem] = useState(0)
     useEffect(() => {
         axios.get(`http://localhost:8000/category`).then((result) => {
             setCat(result.data)
         })
-    }, [])
+
+        axios.get(`http://localhost:8000/cart?userid=${localStorage.getItem('userid')}`).then((result) => {
+            console.log(result.data);
+            const totalquantity = result.data.reduce((sum, item) => sum + item.quantity, 0);
+            console.log(totalquantity);
+            setcartItem(totalquantity)
+        })
+
+
+    }, [localStorage.getItem('userid')])
+
+    useEffect(() => {
+        setcartItem(cartItem + 1)
+    }, [cart])
     return (
         <>
 
@@ -559,7 +573,7 @@ const Header = () => {
                                     <use href="#icon_cart" />
                                 </svg>
                                 <span className="cart-amount d-block position-absolute js-cart-items-count">
-                                    {cart}
+                                    {cartItem}
                                 </span>
                             </a>
                             <a className="header-tools__item" href="account_wishlist.html">

@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { addToCart } from '../cart/cartSlice'
+import { useDispatch } from 'react-redux'
 import axios from 'axios'
 
 // import ReactImageMagnify from 'react-image-magnify';
 const ProductDetails = () => {
 
-
+    const dispatch = useDispatch()
     const { id } = useParams()
     const [prd, setPrd] = useState({})
     useEffect(() => {
@@ -16,6 +18,20 @@ const ProductDetails = () => {
         let product = await axios.get(`http://localhost:8000/product/${id}`)
         console.log(product.data);
         setPrd(product.data)
+    }
+
+    const insertCart = async () => {
+
+        let cartItem = await axios.get(`http://localhost:8000/cart?productid=${prd.id}`)
+        // console.log(cartItem);
+
+        if (cartItem.data.length == 0) {
+            await axios.post(`http://localhost:8000/cart`, { productid: prd.id, quantity: 1 })
+        } else {
+            let cartyData = cartItem.data[0]
+            await axios.patch(`http://localhost:8000/cart/${cartyData.id}`, { quantity: cartyData.quantity + 1 })
+        }
+        dispatch(addToCart(1))
     }
 
 
@@ -374,17 +390,18 @@ const ProductDetails = () => {
                                     {prd.ProductDecription}
                                 </p>
                             </div>
-                            <form name="addtocart-form" method="post">
-                                <div className="product-single__addtocart">
-                                    <a
-                                        href="https://www.amazon.com/"
-                                        className="btn btn-primary btn-addtocart"
-                                        target="_blank"
-                                    >
-                                        Buy on amazon.com
-                                    </a>
-                                </div>
-                            </form>
+
+                            <div className="product-single__addtocart">
+                                <button
+                                    className="btn btn-primary btn-addtocart"
+                                    onClick={() => {
+                                        insertCart()
+                                    }}
+                                >
+                                    Add to cart
+                                </button>
+                            </div>
+
                             <div className="product-single__addtolinks">
                                 <a href="#" className="menu-link menu-link_us-s add-to-wishlist">
                                     <svg
