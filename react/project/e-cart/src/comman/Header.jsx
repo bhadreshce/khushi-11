@@ -16,9 +16,9 @@ const Header = () => {
         })
 
         axios.get(`http://localhost:8000/cart?userid=${localStorage.getItem('userid')}`).then((result) => {
-            console.log(result.data);
+            // console.log(result.data);
             const totalquantity = result.data.reduce((sum, item) => sum + item.quantity, 0);
-            console.log(totalquantity);
+            // console.log(totalquantity);
             setcartItem(totalquantity)
         })
 
@@ -557,10 +557,7 @@ const Header = () => {
                                     </svg>
                                 </Link>
                             </div>
-                            <a
-                                href="#"
-                                className="header-tools__item header-tools__cart js-open-aside"
-                                data-aside="cartDrawer"
+                            <Link data-aside="cartDrawer" to={'/cart'} className="header-tools__item header-tools__cart js-open-aside"
                             >
                                 <svg
                                     className="d-block"
@@ -575,7 +572,7 @@ const Header = () => {
                                 <span className="cart-amount d-block position-absolute js-cart-items-count">
                                     {cartItem}
                                 </span>
-                            </a>
+                            </Link>
                             <a className="header-tools__item" href="account_wishlist.html">
                                 <svg
                                     width={20}

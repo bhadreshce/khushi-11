@@ -18,6 +18,7 @@ import AddProduct from './Admin/AddProduct'
 import UpdateProduct from './Admin/UpdateProduct'
 import UserCategory from './user/UserCategory'
 import ProductDetails from './user/ProductDetails'
+import Cart from './user/Cart'
 function App() {
 
 
@@ -47,6 +48,7 @@ function App() {
             <Route path='/' element={<Home />}></Route>
             <Route path='/category/:id' element={<UserCategory />}></Route>
             <Route path='/product/:id' element={<ProductDetails />}></Route>
+            <Route path='/cart' element={<Cart />}></Route>
             <Route path='/login' element={<LoginRegiaster />}></Route>
           </Route>
         </Routes>
